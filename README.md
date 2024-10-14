@@ -8,6 +8,7 @@
   - 1x NVIDIA GeForce RTX 3090, 4x NVIDIA RTX 5000 GPUs
   - 4x 2TB RAM
   - 60TB SSD storage 
+  - Ubuntu 24.04 LTS
   - Slurm queueing system
 - IBIOLcompute is hosted by the Laboratory of Molecular and Cellular Biology with the following specs:
   - 1x AMD processor with 128 cores
