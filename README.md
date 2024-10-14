@@ -1,1 +1,1 @@
-# ibiol-compute-resources
+# IBIOL compute resources
