@@ -121,9 +121,9 @@ Useful tools:
 
 Note that you receive your username and password after registration.
 
-IBIOLcompute: `ssh username@ibiolcompute.unine.ch`
+SSH access: `ssh username@ibiolcompute.unine.ch`
 
-IBIOLcompute: `http://ibiolcompute.unine.ch:8787`
+RStudio web interface: `http://ibiolcompute.unine.ch:8787`
 
 ### Remote desktop access (VNC) for Ubuntu
 
