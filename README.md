@@ -36,7 +36,9 @@ If you are a new user, please use [this form](https://forms.gle/JwfPj5VRLhjTFNf5
 
 To access the servers, you need to be on the `unine` Wifi or connected through a cable to the network. A connection over a VPN may be possible but for this you need to consult the SITEL resources or open a ticket with specific questions. Not all computers are allowed to connect.
 
-# LEGcompute
+For specific instructions on how to connect to the servers, please see the following sections.
+
+# Working on LEGcompute
 
 ### Command-line access over ssh
 
