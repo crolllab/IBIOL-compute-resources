@@ -12,7 +12,7 @@ The labs managing the servers can provide only very limited support beyond provi
 - LEGcompute1-3 are hosted by the Laboratory of Evolutionary Genetics with the following specs: 
   - 1x Intel, 2x AMD processors with 592 cores in total
   - 1x NVIDIA GeForce RTX 3090, 4x NVIDIA RTX 5000 GPUs
-  - 4x 2TB RAM
+  - 2TB RAM
   - 60TB SSD storage 
   - Ubuntu 24.04 LTS
   - Slurm queueing system
@@ -25,7 +25,7 @@ The labs managing the servers can provide only very limited support beyond provi
   - Slurm queueing system
 
 ### Large storage servers
-- LEGserv: Synology storage server with for the Laboratory of Evolutionary Genetics. 
+- LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics. 
 - IBIOLdata: Synology storage server for the Laboratory of Molecular and Cellular Biology & microscopy data.
 
 ## New user?
@@ -102,13 +102,13 @@ Options for the `sbatch` command:
 - `--mem=8G` to specify that the job needs 8 GB of RAM. The default is 1 GB.
 
 Useful tools:
-`showq` to see the status of the queue and how busy the server is
-`sinfo` to see the status of the nodes (LEGcompute2 and 3)
-`speek jobID` to see the status of your jobs
-`scancel jobID` to cancel a job
-`scontrol show job jobID` to see the details of a job
-`scontrol hold job jobID` to hold a job
-`scontrol release job jobID` to release a job
+- `showq` to see the status of the queue and how busy the server is
+- `sinfo` to see the status of the nodes (LEGcompute2 and 3)
+- `speek jobID` to see the status of your jobs
+- `scancel jobID` to cancel a job
+- `scontrol show job jobID` to see the details of a job
+- `scontrol hold job jobID` to hold a job
+- `scontrol release job jobID` to release a job
 
 
 ## IBIOLcompute
