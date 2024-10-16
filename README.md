@@ -1,5 +1,11 @@
 # IBIOL compute resources
 
+Different labs at the institute host compute and storage servers. This is to complement the resources provided by the SITEL. The servers are managed by the respective labs and but are available for all members of the institute. 
+
+Resources or storage space may be limited. So, please discuss with your PI and Daniel Croll if you need more resources.
+
+The labs managing the servers can provide only very limited support beyond providing you access as we have no staff dedicated to this (all volunteers). If you need training or troubleshooting help, please discuss this with your PI.
+
 ## Available servers & resources
 
 ### Compute servers
@@ -22,30 +28,107 @@
 - LEGserv: Synology storage server with for the Laboratory of Evolutionary Genetics. 
 - IBIOLdata: Synology storage server for the Laboratory of Molecular and Cellular Biology & microscopy data.
 
+## New user?
+
+If you are a new user, please use this form to request an access to the servers: [https://forms.gle/JwfPj5VRLhjTFNf57]
+
 ## How to access the servers
 
 To access the servers, you need to be on the `unine` Wifi or connected through a cable to the network. A connection over a VPN may be possible but for this you need to consult the SITEL resources or open a ticket with specific questions. Not all computers are allowed to connect.
 
+## LEGcompute
+
 ### Command-line access over ssh
 
-LEGcompute2 `ssh username@legcompute2.unine.ch`
+Note that you receive your username and password after registration.
 
-IBIOLcompute `ssh username@ibiolcompute.unine.ch`
+LEGcompute: `ssh username@legcompute2.unine.ch`
+
+Optional: establish a connection with ssh keys (recommended)
+
+```
+### on your local machine
+# accept the default suggestion for saving the file
+ssh-keygen 
+# copy the key
+ssh-copy-id username@legcompute2.unine.ch
+
+# Important for macOS: change the ssh configuration file like this (e.g. with nano):
+nano ~/.ssh/config
+
+# Copy exactly this text in:
+Host *
+    UseKeychain yes
+```
 
 ### Access to RStudio Server (including Terminal access)
 
-LEGcompute2 `http://legcompute2.unine.ch:8787`
+LEGcompute: `http://legcompute2.unine.ch:8787`
 
-IBIOlcompute `http://ibiolcompute.unine.ch:8787`
+### Access files with a client
+
+You can use a client like Cyberduck to access the files on the server. Choose "SFTP (SSH File Transfer Protocol)" and use the same credentials as for the ssh connection.
+
+### Server organization and quota
+
+CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.
+
+Every user has a home folder: `/home/username` with a quota of 20 GB. This is where you could store your scripts and small data files.
+
+You also have access to a data folder: `/data/username` with a quota of 1 TB. This is the place to download, analyze and store your data.
+
+
+### Queuing system (slurm)
+
+If your analyses take hours and use multiple CPUs, you should use the queuing system. This is to ensure that the server is not overloaded and that everyone has a fair share of the resources.
+
+To submit a job, you need to create a script file with the commands you want to run. Here is an example of a script file:
+
+```
+#!/bin/bash
+your command1 here
+your command2 here
+...
+```
+
+Run the script with the following command: `sbatch your_script.sh`
+
+You can also provide the commands directly on the command line with the following command: `sbatch --wrap="your command1 here"`
+
+Options for the `sbatch` command:
+- `-p normal.1000h` to specify that the job can run a maximum of 1000 hours. The default queue is `normal.168h`.
+- `-c 4` to specify that the job needs 4 CPUs. The default is 1 CPU. Make sure that your command is parallelized and configured to use multiple CPUs to avoid blocking resources.
+- `-o output_file.txt` to specify the output file. The default is `slurm-<jobID>.out`.
+- `--mem=8G` to specify that the job needs 8 GB of RAM. The default is 1 GB.
+
+Useful tools:
+`showq` to see the status of the queue and how busy the server is
+`sinfo` to see the status of the nodes (LEGcompute2 and 3)
+`speek jobID` to see the status of your jobs
+`scancel jobID` to cancel a job
+`scontrol show job jobID` to see the details of a job
+`scontrol hold job jobID` to hold a job
+`scontrol release job jobID` to release a job
+
+
+## IBIOLcompute
+
+(under construction)
+
+Note that you receive your username and password after registration.
+
+IBIOLcompute: `ssh username@ibiolcompute.unine.ch`
+
+IBIOLcompute: `http://ibiolcompute.unine.ch:8787`
 
 ### Remote desktop access (VNC) for Ubuntu
+
+(under construction)
 
 This options exists for `IBIOLcompute`. Only cable connections are allowed for VNC access.
 
 ### Windows virtual machine
 
+(under construction)
+
 We are looking into offering this option. Please contact us if you are interested.
-
-# New user?
-
-If you are a new user, please use this form to request an access to the servers: [https://forms.gle/JwfPj5VRLhjTFNf57]
