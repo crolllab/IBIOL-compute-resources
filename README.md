@@ -61,6 +61,8 @@ Host *
     UseKeychain yes
 ```
 
+Once you've logged in, you can change your default password with the `passwd` command.
+
 ### Access to RStudio Server (including Terminal access)
 
 LEGcompute: `http://legcompute2.unine.ch:8787`
@@ -71,11 +73,11 @@ You can use a client like Cyberduck to access the files on the server. Choose "S
 
 ### Server organization and quota
 
-CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.
+***CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.***
 
-Every user has a home folder: `/home/username` with a quota of 20 GB. This is where you could store your scripts and small data files.
+Every user has a home folder: `/home/username` with a quota of `20 GB`. This is where you could store your scripts and small data files.
 
-You also have access to a data folder: `/data/username` with a quota of 1 TB. This is the place to download, analyze and store your data.
+You also have access to a data folder: `/data/username` with a quota of `1 TB`. This is the place to download, analyze and store your data.
 
 
 ### Queuing system (slurm)
