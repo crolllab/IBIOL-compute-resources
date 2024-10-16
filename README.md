@@ -30,7 +30,7 @@ The labs managing the servers can provide only very limited support beyond provi
 
 ## New user?
 
-If you are a new user, please use this form to request an access to the servers: [https://forms.gle/JwfPj5VRLhjTFNf57]
+If you are a new user, please use [this form](https://forms.gle/JwfPj5VRLhjTFNf57) to request an access to the servers.
 
 ## How to access the servers
 
