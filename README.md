@@ -67,7 +67,7 @@ Once you've logged in, you can change your default password with the `passwd` co
 
 ### Access to RStudio Server (including Terminal access)
 
-LEGcompute: `http://legcompute2.unine.ch:8787`
+[RStudio web interface](http://legcompute2.unine.ch:8787): `http://legcompute2.unine.ch:8787`
 
 ### Access files with a client
 
@@ -128,7 +128,7 @@ Note that you receive your username and password after registration.
 
 SSH access: `ssh username@ibiolcompute.unine.ch`
 
-RStudio web interface: `http://ibiolcompute.unine.ch:8787`
+[RStudio web interface](http://ibiolcompute.unine.ch:8787): `http://ibiolcompute.unine.ch:8787`
 
 ### Remote desktop access (VNC) for Ubuntu
 
