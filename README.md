@@ -84,7 +84,7 @@ You also have access to a data folder: `/data/username` with a quota of `1 TB`. 
 
 ### Data backup
 
-The data on the server is ***not backed*** up in any way. It is your responsibility to make backups of your raw data, analyzed data or scripts that you may store on the server. 
+The data on the LEGcompute server is ***not backed up*** in any way. It is your responsibility to make backups of your raw data, analyzed data or scripts that you may store on the server. 
 
 
 ### Queuing system (slurm)
