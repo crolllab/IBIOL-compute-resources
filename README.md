@@ -102,7 +102,7 @@ your command2 here
 
 Run the script with the following command: `sbatch your_script.sh`
 
-You can also provide the commands directly on the command line with the following command: `sbatch --wrap="your command1 here"`
+Single commands can be provided using the `wrap` option: `sbatch --wrap="your command1 here"`
 
 Options for the `sbatch` command:
 - `-p normal.1000h` to specify that the job can run a maximum of 1000 hours. The default queue is `normal.168h`.
