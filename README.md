@@ -82,6 +82,11 @@ Every user has a home folder: `/home/username` with a quota of `20 GB`. This is 
 You also have access to a data folder: `/data/username` with a quota of `1 TB`. This is the place to download, analyze and store your data.
 
 
+### Data backup
+
+The data on the server is ***not backed*** up in any way. It is your responsibility to make backups of your raw data, analyzed data or scripts that you may store on the server. 
+
+
 ### Queuing system (slurm)
 
 If your analyses take hours and use multiple CPUs, you should use the queuing system. This is to ensure that the server is not overloaded and that everyone has a fair share of the resources.
