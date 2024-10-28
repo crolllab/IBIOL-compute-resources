@@ -75,8 +75,6 @@ You can use a client like Cyberduck to access the files on the server. Choose "S
 
 ### Server organization and quota
 
-***CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.***
-
 Every user has a home folder: `/home/username` with a quota of `20 GB`. This is where you could store your scripts and small data files.
 
 You also have access to a data folder: `/data/username` with a quota of `1 TB`. This is the place to download, analyze and store your data.
@@ -84,7 +82,7 @@ You also have access to a data folder: `/data/username` with a quota of `1 TB`. 
 
 ### Data backup
 
-The data on the LEGcompute server is ***not backed up*** in any way. It is your responsibility to make backups of your raw data, analyzed data or scripts that you may store on the server. 
+***CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.***
 
 
 ### Queuing system (slurm)
