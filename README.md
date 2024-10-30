@@ -30,8 +30,9 @@ The labs managing the servers can provide only very limited support beyond provi
 
 ## New user? Need resources?
 
-If you are a new user, please use [this form](https://forms.gle/JwfPj5VRLhjTFNf57) to request an access to the servers. You can also use the form to communicate your needs for resources.
+If you are a new user, please use [this form](https://forms.gle/JwfPj5VRLhjTFNf57) to request an access to the servers. 
 
+You can also use the form to communicate future needs. This way, we know about your needs and will keep you updated.
 
 ## How to access the servers
 
@@ -121,7 +122,7 @@ Useful tools:
 
 # Future improvements (under construction)
 
-Please use the form to communicate your needs for resources and improvements. This way, we know about your needs and will keep you updated.
+Please use the sign-up form above to communicate your needs for resources and improvements. This way, we know about your needs and will keep you updated.
 
 ## GPU access
 
@@ -133,8 +134,8 @@ Access to IBIOLcompute will be opened depending on demand.
 
 ### Remote desktop access (VNC) for Ubuntu
 
-This options exists for `IBIOLcompute`. Only cable connections are allowed for VNC access (SITEL rules).
+This options currently exists for `IBIOLcompute`. Only cable connections are allowed for VNC access (SITEL rules).
 
 ### Windows virtual machine
 
-We are looking into offering this option. Please use the sign-up form if you are interested.
+We are looking into offering this option. 
