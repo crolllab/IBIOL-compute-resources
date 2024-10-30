@@ -1,6 +1,6 @@
 # IBIOL compute resources
 
-Different labs at the institute host compute and storage servers. This is to complement the resources provided by the SITEL. The servers are managed by the respective labs and but are available for all members of the institute. 
+Different labs at the institute host compute and storage servers. This is to complement the resources provided by the SITEL. The servers are managed by the respective labs and but are available for all members of the institute as long as there is capacity. 
 
 Resources or storage space may be limited. So, please discuss with your PI and Daniel Croll if you need more resources.
 
