@@ -28,9 +28,10 @@ The labs managing the servers can provide only very limited support beyond provi
 - LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics. 
 - IBIOLdata: Synology storage server for the Laboratory of Molecular and Cellular Biology & microscopy data.
 
-## New user?
+## New user? Need resources?
 
-If you are a new user, please use [this form](https://forms.gle/JwfPj5VRLhjTFNf57) to request an access to the servers.
+If you are a new user, please use [this form](https://forms.gle/JwfPj5VRLhjTFNf57) to request an access to the servers. You can also use the form to communicate your needs for resources.
+
 
 ## How to access the servers
 
@@ -118,24 +119,22 @@ Useful tools:
 - `scontrol release job jobID` to release a job
 
 
+# Future improvements (under construction)
+
+Please use the form to communicate your needs for resources and improvements. This way, we know about your needs and will keep you updated.
+
+## GPU access
+
+LEGcompute and IBIOLcompute have a total of 8 powerful GPUs for machine learning.
+
 ## IBIOLcompute
 
-(under construction)
-
-Note that you receive your username and password after registration.
-
-SSH access: `ssh username@ibiolcompute.unine.ch`
-
-[RStudio web interface](http://ibiolcompute.unine.ch:8787): `http://ibiolcompute.unine.ch:8787`
+Access to IBIOLcompute will be opened depending on demand.
 
 ### Remote desktop access (VNC) for Ubuntu
 
-(under construction)
-
-This options exists for `IBIOLcompute`. Only cable connections are allowed for VNC access.
+This options exists for `IBIOLcompute`. Only cable connections are allowed for VNC access (SITEL rules).
 
 ### Windows virtual machine
 
-(under construction)
-
-We are looking into offering this option. Please contact us if you are interested.
+We are looking into offering this option. Please use the sign-up form if you are interested.
