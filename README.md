@@ -6,6 +6,8 @@ Resources or storage space may be limited. So, please discuss with your PI and D
 
 The labs managing the servers can provide only very limited support beyond providing you access as we have no staff dedicated to this (all volunteers). If you need training or troubleshooting help, please discuss this with your PI.
 
+![alt text](https://github.com/crolllab/IBIOL-compute-resources/blob/main/image.jpeg?raw=true)
+
 ## Available servers & resources
 
 ### Compute servers
