@@ -38,7 +38,9 @@ You can also use the form to communicate future needs. This way, we know about y
 
 ## How to access the servers
 
-To access the servers, you need to be on the `unine` Wifi or connected through a cable to the network. A connection over a VPN may be possible but for this you need to consult the SITEL resources or open a ticket with specific questions. Not all computers are allowed to connect.
+**From UNINE**: To access the servers, you need to be on the `unine` Wifi or connected through a cable to the network. 
+
+**From home**: A connection over a VPN is possible through the [GlobalProtect VPN client](https://mydoc.unine.ch/fr/Internet_VPN_WiFi/VPN) (you need to log in to view the site). You need to have a computer getting at the least the "orange" status during the checks by the VPN client. "Orange" can be achieved both by SITEL provided machines but also by personal machines that are up-to-date and have a working antivirus. Check the SITEL documentation how to install GlobalProtect to get further information.
 
 For specific instructions on how to connect to the servers, please see the following sections.
 
