@@ -85,6 +85,23 @@ Every user has a home folder: `/home/username` with a quota of `20 GB`. This is 
 
 You also have access to a data folder: `/data/username` with a quota of `1 TB`. This is the place to download, analyze and store your data.
 
+### Transferring files
+
+You can use `scp` or `rsync` to transfer files between your local machine and the server. Here is an example:
+
+```
+# from your local machine to the server
+scp /path/to/local/file username@legcompute2.unine.ch:/data/username/
+scp -r /path/to/local/folder username@legcompute2.unine.ch:/data/username/
+
+# from the server to your local machine, run this command on your local machine!
+scp username@legcompute2.unine.ch:/data/username/file /path/to/local/
+scp -r username@legcompute2.unine.ch:/data/username/folder /path/to/local/
+```
+
+It's recommended to use `rsync` for large files or directories.
+
+You can also access any public website / FTP server from the server to directly download/upload data.
 
 ### Data backup
 
