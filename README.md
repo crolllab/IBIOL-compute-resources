@@ -75,7 +75,7 @@ Once you've logged in, you can change your default password with the `passwd` co
 
 [RStudio web interface](http://legcompute2.unine.ch:8787): `http://legcompute2.unine.ch:8787`
 
-### Access files with a client
+### Access files with a client  
 
 You can use a client like Cyberduck to access the files on the server. Choose "SFTP (SSH File Transfer Protocol)" and use the same credentials as for the ssh connection.
 
