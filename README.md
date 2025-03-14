@@ -50,7 +50,7 @@ For specific instructions on how to connect to the servers, please see the follo
 
 Note that you receive your username and password after registration.
 
-LEGcompute: `ssh username@legcompute2.unine.ch`
+LEGcompute: `ssh username@legcompute3.unine.ch`
 
 Optional: establish a connection with ssh keys (recommended)
 
@@ -59,7 +59,7 @@ Optional: establish a connection with ssh keys (recommended)
 # accept the default suggestion for saving the file
 ssh-keygen 
 # copy the key
-ssh-copy-id username@legcompute2.unine.ch
+ssh-copy-id username@legcompute3.unine.ch
 
 # Important for macOS: change the ssh configuration file like this (e.g. with nano):
 nano ~/.ssh/config
@@ -73,7 +73,7 @@ Once you've logged in, you can change your default password with the `passwd` co
 
 ### Access to RStudio Server (including Terminal access)
 
-[RStudio web interface](http://legcompute2.unine.ch:8787): `http://legcompute2.unine.ch:8787`
+[RStudio web interface](http://legcompute3.unine.ch:8787): `http://legcompute3.unine.ch:8787`
 
 ### Access files with a client  
 
@@ -91,12 +91,12 @@ You can use `scp` or `rsync` to transfer files between your local machine and th
 
 ```
 # from your local machine to the server
-scp /path/to/local/file username@legcompute2.unine.ch:/data/username/
-scp -r /path/to/local/folder username@legcompute2.unine.ch:/data/username/
+scp /path/to/local/file username@legcompute3.unine.ch:/data/username/
+scp -r /path/to/local/folder username@legcompute3.unine.ch:/data/username/
 
 # from the server to your local machine, run this command on your local machine!
-scp username@legcompute2.unine.ch:/data/username/file /path/to/local/
-scp -r username@legcompute2.unine.ch:/data/username/folder /path/to/local/
+scp username@legcompute3.unine.ch:/data/username/file /path/to/local/
+scp -r username@legcompute3.unine.ch:/data/username/folder /path/to/local/
 ```
 
 It's recommended to use `rsync` for large files or directories.
