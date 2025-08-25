@@ -12,7 +12,7 @@ The labs managing the servers can provide only very limited support beyond provi
 
 ### Compute cluster
 - `LEGcompute` is hosted by the Laboratory of Evolutionary Genetics with the following specs: 
-  - 1x Intel, 3x AMD processors with 720 cores in total
+  - CPUs: Intel + AMD processors with 720 cores in total
   - GPUs: 1x NVIDIA GeForce RTX 3090, 3x NVIDIA RTX A5500 GPUs, 4x NVIDIA RTX 5000 GPUs
   - 2.5 TB RAM
   - 80 TB SSD storage 
