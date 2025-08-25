@@ -136,7 +136,7 @@ Useful tools:
 
 ## GPU access
 
-LEGcompute has a total of 8 powerful GPUs for machine learning.
+LEGcompute has a total of 8 powerful GPUs for machine learning. You can access four GPUs freely on the login node (called LEGcompute3). If you need access to more or would like to access it through the queueing system, please get in touch.
 
 
 # Future improvements (under construction)
