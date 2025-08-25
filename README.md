@@ -134,18 +134,14 @@ Useful tools:
 - `scontrol hold job jobID` to hold a job
 - `scontrol release job jobID` to release a job
 
+## GPU access
+
+LEGcompute has a total of 8 powerful GPUs for machine learning.
+
 
 # Future improvements (under construction)
 
 Please use the sign-up form above to communicate your needs for resources and improvements. This way, we know about your needs and will keep you updated.
-
-## GPU access
-
-LEGcompute and IBIOLcompute have a total of 8 powerful GPUs for machine learning.
-
-## IBIOLcompute
-
-Access to IBIOLcompute will be opened depending on demand.
 
 ### Remote desktop access (VNC) for Ubuntu
 
