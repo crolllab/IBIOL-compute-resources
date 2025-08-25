@@ -10,24 +10,18 @@ The labs managing the servers can provide only very limited support beyond provi
 
 ## Available servers & resources
 
-### Compute servers
-- LEGcompute1-3 are hosted by the Laboratory of Evolutionary Genetics with the following specs: 
-  - 1x Intel, 2x AMD processors with 592 cores in total
-  - 1x NVIDIA GeForce RTX 3090, 4x NVIDIA RTX 5000 GPUs
-  - 2TB RAM
-  - 60TB SSD storage 
+### Compute cluster
+- `LEGcompute` is hosted by the Laboratory of Evolutionary Genetics with the following specs: 
+  - 1x Intel, 3x AMD processors with 720 cores in total
+  - GPUs: 1x NVIDIA GeForce RTX 3090, 3x NVIDIA RTX A5500 GPUs, 4x NVIDIA RTX 5000 GPUs
+  - 2.5 TB RAM
+  - 80 TB SSD storage 
   - Ubuntu 24.04 LTS
-  - Slurm queueing system
-- IBIOLcompute is hosted by the Laboratory of Molecular and Cellular Biology with the following specs:
-  - 1x AMD processor with 128 cores
-  - 3x NVIDIA RTX A5500 GPUs
-  - 0.5TB RAM
-  - 15 TB storage
-  - Ubuntu 22.04 LTS
-  - Slurm queueing system
+  - Slurm queuing system
+  - RStudio server
 
 ### Large storage servers
-- LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics. 
+- LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics (>200 TB). 
 - IBIOLdata: Synology storage server for the Laboratory of Molecular and Cellular Biology & microscopy data.
 
 ## New user? Need resources?
