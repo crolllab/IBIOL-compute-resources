@@ -21,7 +21,7 @@ The labs managing the servers can provide only very limited support beyond provi
   - RStudio server
 
 ### Large storage servers
-- LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics (>200 TB). 
+- LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics and other IBIOL labs (>200 TB). 
 - IBIOLdata: Synology storage server for the Laboratory of Molecular and Cellular Biology & microscopy data.
 
 ## New user? Need resources?
