@@ -46,7 +46,7 @@ Note that you receive your username and password after registration.
 
 LEGcompute: `ssh username@legcompute3.unine.ch`
 
-Optional: establish a connection with ssh keys (recommended)
+Recommeded: establish a connection with ssh key
 
 ```
 ### on your local machine
@@ -63,7 +63,21 @@ Host *
     UseKeychain yes
 ```
 
-Once you've logged in, you can change your default password with the `passwd` command.
+### Lost or change your password?
+
+(NB: the `passwd` command on the cluster does not properly reset your password)
+
+_Lost password_:
+1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)
+2.) Enter your username
+3.) If you forgot your password, click on "Forgot your password?". Type your email (your unine.ch address in most cases) and follow the instructions you get by mail.
+
+_Change password_:
+1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)
+2.) Enter your username, then your password
+3.) Click on the user icon top right, select "Personal"
+4.) Click on "Change password"
+
 
 ### Access to RStudio Server (including Terminal access)
 
