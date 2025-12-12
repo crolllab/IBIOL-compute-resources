@@ -67,16 +67,16 @@ Host *
 
 (NB: the `passwd` command on the cluster does not properly reset your password)
 
-_Lost password_:
-1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)
-2.) Enter your username
-3.) If you forgot your password, click on "Forgot your password?". Type your email (your unine.ch address in most cases) and follow the instructions you get by mail.
+_Lost password_:  
+1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)  
+2.) Enter your username  
+3.) If you forgot your password, click on "Forgot your password?". Type your email (your unine.ch address in most cases) and follow the instructions you get by mail.  
 
-_Change password_:
-1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)
-2.) Enter your username, then your password
-3.) Click on the user icon top right, select "Personal"
-4.) Click on "Change password"
+_Change password_:  
+1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)  
+2.) Enter your username, then your password  
+3.) Click on the user icon top right, select "Personal"  
+4.) Click on "Change password"  
 
 
 ### Access to RStudio Server (including Terminal access)
