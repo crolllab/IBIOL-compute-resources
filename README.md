@@ -70,7 +70,7 @@ Host *
 _Lost password_:  
 1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)  
 2.) Enter your username  
-3.) If you forgot your password, click on "Forgot your password?". Type your email (your unine.ch address in most cases) and follow the instructions you get by mail. Check your spam folder if necessary.    
+3.) If you forgot your password, click on "Forgot your password?". Type your email (your unine.ch address in most cases) and follow the instructions you get by mail. Check your spam folder if necessary. If no message comes in, please contact Daniel.    
 
 _Change password_:  
 1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)  
