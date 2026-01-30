@@ -40,7 +40,7 @@ For specific instructions on how to connect to the servers, please see the follo
 
 # Working on LEGcompute
 
-### Command-line access over ssh
+## Command-line access over ssh
 
 Note that you receive your username and password after registration.
 
@@ -63,7 +63,7 @@ Host *
     UseKeychain yes
 ```
 
-### Lost or change your password?
+## Lost or change your password?
 
 (NB: the `passwd` command on the cluster does not properly reset your password)
 
@@ -83,18 +83,21 @@ _Change password_:
 
 [RStudio web interface](http://legcompute3.unine.ch:8787): `http://legcompute3.unine.ch:8787`
 
-### Access files with a client  
+
+## Server organization and quota
+
+Every user has a home folder: `/home/username` with a quota of 50-100 GB. This is where you could store your scripts and small data files.
+
+You also have access to a data folder: `/data/username` with a quota of 1+ TB. This is the place to download, analyze and store your data.
+
+All users have access to `/scratch`. This is a space to storage large amounts of temporary files. Files older than 30 days will automatically be deleted!
+
+Please check your quota on the login screen.
+
+
+## Transferring files
 
 You can use a client like Cyberduck to access the files on the server. Choose "SFTP (SSH File Transfer Protocol)" and use the same credentials as for the ssh connection.
-
-### Server organization and quota
-
-Every user has a home folder: `/home/username` with a quota of `20 GB`. This is where you could store your scripts and small data files.
-
-You also have access to a data folder: `/data/username` with a quota of `1 TB`. This is the place to download, analyze and store your data.
-
-### Transferring files
-
 You can use `scp` or `rsync` to transfer files between your local machine and the server. Here is an example:
 
 ```
@@ -111,12 +114,12 @@ It's recommended to use `rsync` for large files or directories.
 
 You can also access any public website / FTP server from the server to directly download/upload data.
 
-### Data backup
+## Data backup
 
 ***CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.***
 
 
-### Queuing system (slurm)
+## Queuing system (slurm)
 
 If your analyses take hours and use multiple CPUs, you should use the queuing system. This is to ensure that the server is not overloaded and that everyone has a fair share of the resources.
 
@@ -152,6 +155,55 @@ Useful tools:
 
 LEGcompute has a total of 8 powerful GPUs for machine learning. You can access four GPUs freely on the login node (called LEGcompute3). If you need access to more or would like to access it through the queueing system, please get in touch.
 
+## Using software modules
+
+Available modules include many popular bioinformatics tools, R, nextflow, some Java, Python and Perl versions, etc.
+
+### Finding available software (and specific versions)
+```bash
+module overview           # List view of all modules
+module avail              # List all available modules (including available versions)
+module avail SAM          # Search for specific tool (e.g., SAMtools)
+module spider BLAST       # Search with descriptions (if you are unsure about the spelling)
+```
+
+### Loading and using modules
+```bash
+module load SAMtools/1.19.2-GCC-13.2.0     # Load a specific version
+module load SAMtools BCFtools GATK         # Load multiple modules at once
+samtools --version                         # Use the loaded software
+```
+
+### Unloading modules
+```bash
+module unload SAMtools    # Unload specific module
+module purge              # Unload all modules
+```
+
+### Using more than one module at once
+```bash
+module load SAMtools VCFtools              # loads the default SAMtools and VCFtools
+```
+
+**NB: Some modules might have a conflict when being used together. Loading a problematic module will trigger a warning message. In most cases, the modules still work together though.**
+
+You can avoid any module conflict by unloading a module directly after use.
+
+### Using modules in Slurm jobs
+
+**In a job script:**
+```bash
+#!/bin/bash
+#SBATCH --cpus-per-task=4
+module load BWA SAMtools
+bwa mem -t 4 ref.fa reads.fq | samtools sort -o output.bam
+```
+
+**With sbatch --wrap:**
+```bash
+module load FastQC
+sbatch --wrap "fastqc sample.fastq.gz" --cpus-per-task=2
+```
 
 # Future improvements (under construction)
 
