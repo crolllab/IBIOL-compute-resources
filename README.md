@@ -119,7 +119,7 @@ You can also access any public website / FTP server from the server to directly 
 ***CAUTION: No backups are made of your data on the server. It is your responsability to create meaningful copies at regular intervals.***
 
 
-## Queuing system (slurm)
+## Queuing system (Slurm)
 
 If your analyses take hours and use multiple CPUs, you should use the queuing system. This is to ensure that the server is not overloaded and that everyone has a fair share of the resources.
 
@@ -155,9 +155,15 @@ Useful tools:
 
 LEGcompute has a total of 8 powerful GPUs for machine learning. You can access four GPUs freely on the login node (called LEGcompute3). If you need access to more or would like to access it through the queueing system, please get in touch.
 
+## Installing software
+
+`LEGcompute` has installations of R, Java, Python and Perl. Bioinformatics software is most easily accessed using the available modules (see below). Additional options include using conda / micromamba or containers.
+
 ## Using software modules
 
 Available modules include many popular bioinformatics tools, R, nextflow, some Java, Python and Perl versions, etc.
+
+There are currently ~200 tools available.
 
 ### Finding available software (and specific versions)
 ```bash
