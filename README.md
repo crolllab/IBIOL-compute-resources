@@ -151,9 +151,25 @@ Useful tools:
 - `scontrol hold job jobID` to hold a job
 - `scontrol release job jobID` to release a job
 
-## GPU access
+## GPU Resources
 
-LEGcompute has a total of 8 powerful GPUs for machine learning. You can access four GPUs freely on the login node (called LEGcompute3). If you need access to more or would like to access it through the queueing system, please get in touch.
+The cluster provides GPUs on three nodes:
+
+| Node | GPUs | Type | VRAM |
+|------|------|------|------|
+| LEGcompute1 | 1 | `rtx3090` | 24 GB |
+| LEGcompute3 | 4 | `rtx5000ada` | 32 GB each |
+| IBIOLcompute | 3 | `rtxa5500` | 24 GB each |
+
+Request a GPU in your job script with `--gres=gpu:<count>` (either in a script or using `sbatch --gres=...`). To target a specific model, add the type before the count.
+
+```bash
+#SBATCH --gres=gpu:1              # any available GPU
+#SBATCH --gres=gpu:2              # any 2 GPUs on the same node
+#SBATCH --gres=gpu:rtx3090:1      # specifically an RTX 3090 (LEGcompute1)
+#SBATCH --gres=gpu:rtx5000ada:2   # 2× RTX 5000 Ada (LEGcompute3 only)
+#SBATCH --gres=gpu:rtxa5500:1     # RTX A5500 (IBIOLcompute only)
+```
 
 ## Installing software
 
