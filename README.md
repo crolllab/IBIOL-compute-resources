@@ -143,7 +143,10 @@ Options for the `sbatch` command:
 - `--mem=8G` to specify that the job needs 8 GB of RAM. The default is 1 GB.
 
 Useful tools:
-- `showq` to see the status of the queue and how busy the server is
+- `showq` to see the status of your jobs
+- `showq -a` shows all pending and running jobs on the server
+- `seff JOBID` shows memory and CPU efficiency stats (successfully completed jobs only)
+- `seff -a` show these stats the last 100 jobs
 - `sinfo` to see the status of the nodes (LEGcompute2 and 3)
 - `speek jobID` to see the status of your jobs
 - `scancel jobID` to cancel a job
