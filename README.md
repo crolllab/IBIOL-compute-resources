@@ -137,7 +137,7 @@ Run the script with the following command: `sbatch your_script.sh`
 Single commands can be provided using the `wrap` option: `sbatch --wrap="your command1 here"`
 
 Options for the `sbatch` command:
-- `-p normal.1000h` to specify that the job can run a maximum of 1000 hours. The default queue is `normal.168h`.
+- `-p normal.1000h` to specify that the job can run a maximum of 1000 hours. `-p normal.12h` for jobs with a maximum of 12h. The default queue is `normal.168h`.
 - `-c 4` to specify that the job needs 4 CPUs. The default is 1 CPU. Make sure that your command is parallelized and configured to use multiple CPUs to avoid blocking resources.
 - `-o output_file.txt` to specify the output file. The default is `slurm-<jobID>.out`.
 - `--mem=8G` to specify that the job needs 8 GB of RAM. The default is 1 GB.
