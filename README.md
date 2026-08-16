@@ -12,11 +12,11 @@ The labs managing the servers can provide only very limited support beyond provi
 
 ### Compute cluster
 - `LEGcompute` is hosted by the Laboratory of Evolutionary Genetics with the following specs: 
-  - CPUs: Intel + AMD processors with 720 cores in total
-  - GPUs: 1x NVIDIA GeForce RTX 3090, 3x NVIDIA RTX A5500 GPUs, 4x NVIDIA RTX 5000 GPUs
-  - 2.5 TB RAM
+  - CPUs: Intel + AMD processors with ~1000 cores in total
+  - GPUs: 1x NVIDIA GeForce RTX 3090, 3x NVIDIA RTX A5500 GPUs, 4x NVIDIA RTX 5000 GPUs, 2x NVIDIA RTX Pro Blackwell 96 GB
+  - 4 TB RAM
   - 80 TB SSD storage 
-  - Ubuntu 24.04 LTS
+  - Ubuntu 26.04 LTS
   - Slurm queuing system
   - RStudio server
 
@@ -44,7 +44,7 @@ For specific instructions on how to connect to the servers, please see the follo
 
 Note that you receive your username and password after registration.
 
-LEGcompute: `ssh username@legcompute3.unine.ch`
+LEGcompute: `ssh username@legcompute.unine.ch`
 
 Recommeded: establish a connection with ssh key
 
@@ -53,7 +53,7 @@ Recommeded: establish a connection with ssh key
 # accept the default suggestion for saving the file
 ssh-keygen 
 # copy the key
-ssh-copy-id username@legcompute3.unine.ch
+ssh-copy-id username@legcompute.unine.ch
 
 # Important for macOS: change the ssh configuration file like this (e.g. with nano):
 nano ~/.ssh/config
@@ -81,7 +81,7 @@ _Change password_:
 
 ### Access to RStudio Server (including Terminal access)
 
-[RStudio web interface](http://legcompute3.unine.ch:8787): `http://legcompute3.unine.ch:8787`
+[RStudio web interface](http://legcompute.unine.ch:8787): `http://legcompute.unine.ch:8787`
 
 
 ## Server organization and quota
@@ -102,12 +102,12 @@ You can use `scp` or `rsync` to transfer files between your local machine and th
 
 ```
 # from your local machine to the server
-scp /path/to/local/file username@legcompute3.unine.ch:/data/username/
-scp -r /path/to/local/folder username@legcompute3.unine.ch:/data/username/
+scp /path/to/local/file username@legcompute.unine.ch:/data/username/
+scp -r /path/to/local/folder username@legcompute.unine.ch:/data/username/
 
 # from the server to your local machine, run this command on your local machine!
-scp username@legcompute3.unine.ch:/data/username/file /path/to/local/
-scp -r username@legcompute3.unine.ch:/data/username/folder /path/to/local/
+scp username@legcompute.unine.ch:/data/username/file /path/to/local/
+scp -r username@legcompute.unine.ch:/data/username/folder /path/to/local/
 ```
 
 It's recommended to use `rsync` for large files or directories.
@@ -156,22 +156,17 @@ Useful tools:
 
 ## GPU Resources
 
-The cluster provides GPUs on three nodes:
-
-| Node | GPUs | Type | VRAM |
-|------|------|------|------|
-| LEGcompute1 | 1 | `rtx3090` | 24 GB |
-| LEGcompute3 | 4 | `rtx5000ada` | 32 GB each |
-| IBIOLcompute | 3 | `rtxa5500` | 24 GB each |
+The cluster provides 10 large GPUs: RTX 3090, RTX 5000 Ada, RTX A5500 and RTX PRO 6000 Blackwell (96 GB)
 
 Request a GPU in your job script with `--gres=gpu:<count>` (either in a script or using `sbatch --gres=...`). To target a specific model, add the type before the count.
 
 ```bash
 #SBATCH --gres=gpu:1              # any available GPU
 #SBATCH --gres=gpu:2              # any 2 GPUs on the same node
-#SBATCH --gres=gpu:rtx3090:1      # specifically an RTX 3090 (LEGcompute1)
-#SBATCH --gres=gpu:rtx5000ada:2   # 2× RTX 5000 Ada (LEGcompute3 only)
-#SBATCH --gres=gpu:rtxa5500:1     # RTX A5500 (IBIOLcompute only)
+#SBATCH --gres=gpu:rtx3090:1      # specifically an RTX 3090
+#SBATCH --gres=gpu:rtx5000ada:2   # 2× RTX 5000 Ada
+#SBATCH --gres=gpu:rtxa5500:1     # RTX A5500
+#SBATCH --gres=gpu:rtxpro6000:1   # RTX PRO 6000 Blackwell
 ```
 
 ## Installing software
