@@ -111,7 +111,7 @@ legcompute.unine.ch
 
 ### Good to know
 
-**You can browse and install software from the internet.** Firefox is already installed for this.
+**You can browse and install software from the internet.** Firefox is already installed for this. Do a right-click on the Desktop => Select Applications => Web Browser.
 
 **Your session survives disconnection.** Close the window or lose your network, and everything stays exactly as you left it — reconnect and your applications are still open. This is the main advantage over `ssh -X`.
 
