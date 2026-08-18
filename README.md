@@ -111,6 +111,8 @@ legcompute.unine.ch
 
 ### Good to know
 
+**You can browse and install software from the internet.** Firefox is already installed for this.
+
 **Your session survives disconnection.** Close the window or lose your network, and everything stays exactly as you left it — reconnect and your applications are still open. This is the main advantage over `ssh -X`.
 
 **Sessions disconnected for more than 8 hours are closed** and unsaved work in them is lost. Log out properly when you finish for the day.
