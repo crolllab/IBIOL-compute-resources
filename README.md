@@ -79,9 +79,55 @@ _Change password_:
 4.) Click on "Change password"  
 
 
-### Access to RStudio Server (including Terminal access)
+## Access to RStudio Server (including Terminal access)
 
 [RStudio web interface](http://legcompute.unine.ch:8787): `http://legcompute.unine.ch:8787`
+
+
+## Remote desktop access (VNC) for Ubuntu
+
+A full graphical desktop on the cluster head node, in addition to SSH. Log in with your **usual cluster username and password** — the same ones you use for SSH. No separate account, no key to set up.
+
+### Server address
+
+```
+legcompute.unine.ch
+```
+
+### On macOS
+
+1. Install **Windows App** from the Mac App Store — free, published by Microsoft. It was called *Microsoft Remote Desktop* until 2024, and you may still find it under that name.
+2. Open it and click **+** → **Add PC**.
+3. **PC name:** `legcompute.unine.ch`
+4. **User account:** choose *Ask when required*, or add your cluster username and password to save it.
+5. Double-click the entry to connect. Accept the certificate warning the first time — the server uses a self-signed certificate, which is expected.
+
+### On Windows
+
+1. **Remote Desktop Connection** is already installed. Press the Windows key and type `Remote Desktop Connection`, or run `mstsc`.
+2. **Computer:** `legcompute.unine.ch`
+3. Click **Connect**, then enter your cluster username and password.
+4. Accept the certificate warning on first connect — expected, as above.
+
+### Good to know
+
+**Your session survives disconnection.** Close the window or lose your network, and everything stays exactly as you left it — reconnect and your applications are still open. This is the main advantage over `ssh -X`.
+
+**Sessions disconnected for more than 8 hours are closed** and unsaved work in them is lost. Log out properly when you finish for the day.
+
+**Eight people can be connected at once.** If you get turned away, someone will need to disconnect first.
+
+### Please don't run heavy compute jobs on the desktop
+
+The head node is also a compute node, and the desktop shares resources: **24 GB of memory and 8 CPUs per person**. Exceed the memory limit and your processes are killed without warning.
+
+The desktop is for interactive work — graphical software, editors, file management, IGV, plotting, light scripting. Anything that needs real memory, many cores, or a GPU belongs in a Slurm job:
+
+```bash
+srun --cpus-per-task=8 --mem=32G --pty bash
+```
+
+**GPU work must go through Slurm.** The two GPUs on this machine are scheduled by Slurm and are not available from the desktop.
 
 
 ## Server organization and quota
@@ -225,14 +271,14 @@ module load FastQC
 sbatch --wrap "fastqc sample.fastq.gz" --cpus-per-task=2
 ```
 
+
 # Future improvements (under construction)
 
 Please use the sign-up form above to communicate your needs for resources and improvements. This way, we know about your needs and will keep you updated.
 
-### Remote desktop access (VNC) for Ubuntu
-
-This options currently exists for `IBIOLcompute`. Only cable connections are allowed for VNC access (SITEL rules).
-
 ### Windows virtual machine
 
-We are looking into offering this option. 
+We are currently unable to provide this option. 
+
+
+
