@@ -21,7 +21,7 @@ The labs managing the servers can provide only very limited support beyond provi
   - RStudio server
 
 ### Large storage servers
-- LEGserv: Synology storage server for the Laboratory of Evolutionary Genetics and other IBIOL labs (>200 TB). 
+- LEGserv: Synology storage servers for the Laboratory of Evolutionary Genetics and other IBIOL labs (>200 TB). 
 - IBIOLdata: Synology storage server for the Laboratory of Molecular and Cellular Biology & microscopy data.
 
 ## New user? Need resources?
@@ -68,12 +68,12 @@ Host *
 (NB: the `passwd` command on the cluster does not properly reset your password)
 
 _Lost password_:  
-1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)  
+1.) Connect to the [User account server](https://legstorage.direct.quickconnect.to)  
 2.) Enter your username  
 3.) If you forgot your password, click on "Forgot your password?". Type your email (your unine.ch address in most cases) and follow the instructions you get by mail. Check your spam folder if necessary. If no message comes in, please contact Daniel.    
 
 _Change password_:  
-1.) Connect to the [User account server](https://legserv.de6.quickconnect.to)  
+1.) Connect to the [User account server](https://legstorage.direct.quickconnect.to)  
 2.) Enter your username, then your password  
 3.) Click on the user icon top right, select "Personal"  
 4.) Click on "Change password"  
